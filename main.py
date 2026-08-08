@@ -14,7 +14,6 @@ class Oasis:
         elif self.time_hours > 100 or self.exp > 100:
             time_hours += 25
             exp += 25
-        else:
 
 
 if __name__ == '__main__':
