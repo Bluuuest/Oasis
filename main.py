@@ -61,6 +61,7 @@ def main():
     taskList = [task1, task2, task3, task4, task5]
     jobList = [job1, job2, job3, job4, job5]
     errandList = [errand1, errand2, errand3, errand4, errand5]
+    completedErrands = []
     email = ' '
     newName = ' '
     newHours = 0
@@ -183,10 +184,25 @@ def main():
                 print('Here are all available errands.;')
                 for entry, errand in enumerate(errandList):
                         print(entry, errand)
+                print('Completed errands;')
+                for entry, completed in enumerate(completedErrands):
+                        print(entry, completed)
                 print('What would you like to do?')
                 errandSubmenu()
 
                 option3Answer = int(input('Please type a number.;   '))
+
+                if option3Answer == 1:
+                    for entry, errand in enumerate(errandList):
+                        print(entry, errand)
+                    errandSelection = int(input('Pick an errand to mark complete. [Pick a number]     '))
+                    completionAnswer = str(input('Do you want to mark this errand as complete? [y/n]'))
+                    if completionAnswer == 'y':
+                        completedErrands.append(errand)
+                        errandList.pop(errandSelection)
+                        
+
+                        
 
             elif answer2 == 5:
                 print(f'Goodbye, {email}!')
