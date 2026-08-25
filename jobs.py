@@ -1,9 +1,10 @@
-from main import Task
+from tasks import Task
 
 class Job(Task):
     pass
 
     def job(self, name, hourlyWage, bonus):
+        super().__init__(name)
         self.name = name
         self.hourlyWage = hourlyWage
         self.bonus = bonus

@@ -1,9 +1,11 @@
-from main import Task
+from tasks import Task
 
 class Errand(Task):
     pass
 
-    def Errand(self, incentive, energySpent, commuteType):
+    def Errand(self, name, incentive, energySpent, commuteType):
+        super().__init__(name)
+        self.name = name
         self.incentive = incentive
         self.energySpent = energySpent
         self.commuteType = commuteType
